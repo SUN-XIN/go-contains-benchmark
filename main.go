@@ -6,8 +6,7 @@ import (
 	"strings"
 	"time"
 )
-
-const ()
+ 
 
 func main() {
 	var v struct{}
