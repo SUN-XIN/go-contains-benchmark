@@ -1,6 +1,6 @@
 # go-contains-benchmark
 
-# Output
+# Output of main.go
     $>go run main.go
     use slice for size (500): 2.635µs 
     use map for size (500) exist (true): 248ns 
@@ -31,6 +31,12 @@
     use map for size (5000000) exist (false): 767ns 
     use string contains for size (5000000) exist (true): 15.229476ms 
     use string contains for size (5000000) exist (false): 15.348878m
+    
+# Output of contains_test.go
+    $> go test -test.bench Bench
+    BenchmarkMap-4              	100000000	        12.9 ns/op
+    BenchmarkSlice-4            	   10000	    207162 ns/op
+    BenchmarkStringContains-4   	    2000	    877676 ns/op
 
 # Conclusion
   using slice: the execution time is proportional to the size  
